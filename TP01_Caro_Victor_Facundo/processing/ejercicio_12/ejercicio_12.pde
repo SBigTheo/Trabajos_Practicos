@@ -1,12 +1,16 @@
-String texto= "ingresa tu nombre:";
+String consola= "ingresa tu nombre:";
 String nombre= "";
 String saludo= "";
 
-println(texto);
+void setup() {
+  size(360, 360);
+  println(consola);
+}
 
 void draw() {
-  text(saludo);
-  textSixe(12);
+  background(0);
+  text(saludo, 25, 25);
+  textSize(12);
 }
 
 void keyPressed() {
@@ -15,6 +19,6 @@ void keyPressed() {
   
   if (key == '\n'){ 
     saludo = "hola " + nombre;
-    println(mensaje_saludo);
+    println(saludo);
   }
 }
