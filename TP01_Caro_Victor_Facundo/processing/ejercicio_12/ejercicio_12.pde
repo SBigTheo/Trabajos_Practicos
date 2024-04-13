@@ -1,4 +1,4 @@
-String consola= "ingresa tu nombre:";
+String consola= "Ingresa tu nombre:";
 String nombre= "";
 String saludo= "";
 
@@ -18,7 +18,7 @@ void keyPressed() {
   println(nombre);
   
   if (key == '\n'){ 
-    saludo = "hola " + nombre;
+    saludo = "¡Hola " + nombre + "!";
     println(saludo);
   }
 }
