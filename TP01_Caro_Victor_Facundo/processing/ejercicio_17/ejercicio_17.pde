@@ -30,9 +30,15 @@ void draw(){
   background(#6997F4);
   linkx= mouseX;
   linky= mouseY;
-  fill(#F4AA26);
-  rect(cofrex, cofrey, 50, 50);
-  fill(#49F563);
-  ellipse(linkx, linky, 50,50);
-}
+  float distancia= dist(linkx, linky, cofrex, cofrey);
+  if (distancia < 49){
+  } 
   
+  else{
+    fill(#F4AA26);
+    rect(cofrex, cofrey, 50, 50);
+  }
+  
+  fill(#49F563);
+  ellipse(linkx, linky, 50, 50);
+}
