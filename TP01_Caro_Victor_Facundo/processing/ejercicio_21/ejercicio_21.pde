@@ -1,7 +1,6 @@
 int distancia;
 PVector puntoA, puntoB, puntoC, puntoD;
 
-
 public void setup (){
   size(500,500);
   background(#969696);
