@@ -15,4 +15,11 @@ int cofrex= x2;
 int cofrey= y2;
 fill(#F4AA26);
   rect(cofrex, cofrey, 50, 50);
+  
+int catetox= (cofrex - linkx);
+int catetoy= (cofrey - linky);
+
+float distancia= pow(pow(catetox,2) + pow(catetoy,2), 0.5);
+
+  println("La distancia para llegar al Cofre es de: " + distancia);
 }
