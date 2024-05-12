@@ -9,4 +9,8 @@ void setup() {
 
 void draw() {
   background(220);
+  
+  for (Dado dado : dados) {
+    dado.display();
+  }
 }
