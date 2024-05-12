@@ -21,3 +21,24 @@ void mouseClicked() {
     dado.tirar();
   }
 }
+
+void keyPressed() {
+  // Si se presiona la telca "spacio" se dibuja el resultado por tirada en consola
+  if (key == ' ') {
+    dibujarResultados();
+  }
+}
+
+void dibujarResultados() {
+  int columna= 0;
+  for (int i = 0; i < dados.size(); i++) {
+    Dado dado = dados.get(i);
+    print(dado.valor + " ");
+    columna++;
+    if (columna == 4) {
+      println();
+      columna= 0;
+    }
+  }
+  println();
+}
