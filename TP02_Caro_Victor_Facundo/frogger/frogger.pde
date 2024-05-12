@@ -7,6 +7,8 @@ PImage auto1;
 PImage auto2;
 PImage auto3;
 
+Escenario escenario;
+
 void setup() {
   size(700, 800);
   cesped = loadImage("cesped.png");
@@ -24,8 +26,11 @@ void setup() {
   auto2.resize(50, 50);
   auto3 = loadImage("auto3.png");
   auto3.resize(50, 50);
+  
+  escenario = new Escenario();
 }
 
 void draw() {
   background(200);
+  escenario.mostrar();
 }
