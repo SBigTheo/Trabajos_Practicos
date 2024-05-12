@@ -3,7 +3,7 @@ class Dado extends GameObject {
   
   Dado(PVector posicion) {
     super(posicion);
-    this.valor= 2;
+    this.valor= 3;
   }
   
   void tirar() {
@@ -32,6 +32,11 @@ class Dado extends GameObject {
       case 2:
         ellipse(x - distancia / 2, y - distancia / 2, tamañoPunto, tamañoPunto);
         ellipse(x + distancia / 2, y + distancia / 2, tamañoPunto, tamañoPunto);
+        break;
+      case 3:
+        ellipse(x, y, tamañoPunto, tamañoPunto);
+        ellipse(x - distancia, y + distancia, tamañoPunto, tamañoPunto);
+        ellipse(x + distancia, y - distancia, tamañoPunto, tamañoPunto);
         break;
      }
  }
