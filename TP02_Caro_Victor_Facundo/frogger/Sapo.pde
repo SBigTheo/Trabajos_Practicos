@@ -12,4 +12,14 @@ class Sapo {
     frog1.resize(40, 40);
     frog2.resize(40, 40);
   }
+  
+  void mostrar() {
+    if (frameCount % 30 < 10) {
+      image(frog0, x, y);
+    } else if (frameCount % 30 < 20) {
+      image(frog1, x, y);
+    } else {
+      image(frog2, x, y);
+    }
+  }
 }

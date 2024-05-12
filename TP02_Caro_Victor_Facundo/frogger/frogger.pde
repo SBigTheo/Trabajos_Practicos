@@ -8,6 +8,7 @@ PImage auto2;
 PImage auto3;
 
 Escenario escenario;
+Sapo sapo;
 
 void setup() {
   size(700, 800);
@@ -28,9 +29,11 @@ void setup() {
   auto3.resize(50, 50);
   
   escenario = new Escenario();
+  sapo = new Sapo(300, 700);
 }
 
 void draw() {
   background(200);
   escenario.mostrar();
+  sapo.mostrar();
 }
