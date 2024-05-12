@@ -14,3 +14,10 @@ void draw() {
     dado.display();
   }
 }
+
+void mouseClicked() {
+  // Si se hace clic en el área del dado se tira
+  for (Dado dado : dados) {
+    dado.tirar();
+  }
+}
