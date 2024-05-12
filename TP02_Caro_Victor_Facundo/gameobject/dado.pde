@@ -11,6 +11,7 @@ class Dado extends GameObject {
   }
   
   void display() {
+    rectMode(CENTER);
     rect(posicion.x, posicion.y, 100, 100, 20);
   }
 }
