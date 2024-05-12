@@ -37,3 +37,7 @@ void draw() {
   escenario.mostrar();
   sapo.mostrar();
 }
+
+void keyPressed() {
+  sapo.mover();
+}
