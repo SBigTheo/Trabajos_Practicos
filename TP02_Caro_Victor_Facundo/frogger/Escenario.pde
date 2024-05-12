@@ -9,5 +9,12 @@ class Escenario {
         image(arbusto, fila * 50, 0);
       }
     }
+    
+    for (int columna = 1; columna <= 6; columna++) {
+      for (int fila = 0; fila < 14; fila++) {
+        image(ruta, fila * 50, columna * 50);
+      }
+    }
+    
   }
 }
