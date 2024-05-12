@@ -3,11 +3,11 @@ class Dado extends GameObject {
   
   Dado(PVector posicion) {
     super(posicion);
-    this.valor= 6;
+    this.valor= 0;
   }
   
   void tirar() {
-    valor= (int) random(1, 6);
+    valor= (int) random(1, 7);
   }
   
   void display() {
