@@ -1,5 +1,5 @@
 PImage fondo;
-PImage nave;
+PImage naveIMG;
 PImage asteroide;
 PImage naveEnemigo;
 
@@ -9,8 +9,8 @@ void setup() {
     size(800, 600);
     fondo = loadImage("fondo.png");
     fondo.resize(800, 600);
-    nave = loadImage("nave.png");
-    nave.resize(150, 150);
+    naveIMG = loadImage("nave.png");
+    naveIMG.resize(150, 150);
     asteroide = loadImage("asteroide.png");
     naveEnemigo = loadImage("naveEnemigo.png");
 }
