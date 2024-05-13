@@ -15,6 +15,11 @@ class Sapo {
     frog2.resize(40, 40);
   }
   
+  void regresarInicio() {
+    x = 300;
+    y = 700;
+}
+  
   void mostrar() {
     if (frameCount % 30 < 10) {
       image(frog0, x, y);

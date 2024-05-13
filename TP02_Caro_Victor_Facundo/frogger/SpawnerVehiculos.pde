@@ -58,6 +58,11 @@ class SpawnerVehiculos {
         Vehiculo vehiculo = vehiculos.get(i);
         vehiculo.mover();
         vehiculo.mostrar();
+        
+        if (vehiculo.x < sapo.x + 40 && vehiculo.x + 50 > sapo.x && vehiculo.y < sapo.y + 40 && vehiculo.y + 50 > sapo.y) {
+            sapo.regresarInicio();
+        }
+        
       }
     }
   }
