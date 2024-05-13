@@ -16,12 +16,11 @@ class Nave implements IDisplayable, IMoveable, IController {
  public void display() {
         parent.image(img, x, y);
     }
-
     public void move() {
-        if (moveUp) y -= speed;
-        if (moveDown) y += speed;
-        if (moveLeft) x -= speed;
-        if (moveRight) x += speed;
+      if (moveUp && y > 0) y -= speed;
+      if (moveDown && y < parent.height - img.height) y += speed;
+      if (moveLeft && x > 0) x -= speed;
+      if (moveRight && x < parent.width - img.width) x += speed;
     }
 
     public void readCommand() {
