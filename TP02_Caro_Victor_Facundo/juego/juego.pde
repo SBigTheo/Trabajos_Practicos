@@ -19,7 +19,7 @@ void setup() {
     naveIMG = loadImage("nave.png");
     naveIMG.resize(150, 150);
     asteroide = loadImage("asteroide.png");
-    asteroide.resize(200, 200);
+    asteroide.resize(100, 100);
     naveEnemigo = loadImage("naveEnemigo.png");
     
     balas = new ArrayList<>();
