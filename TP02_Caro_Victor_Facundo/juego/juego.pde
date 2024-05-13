@@ -5,11 +5,13 @@ PImage naveEnemigo;
 
 ArrayList<Bala> balas;
 ArrayList<Asteroide> asteroides;
+ArrayList<Enemigo> enemigo;
 
 Nave nave;
 
 final float NAVE_SPEED = 4;
-final float ASTEROIDE_SPEED = 3;
+final float ASTEROIDE_SPEED = 5;
+final float ENEMIGO_SPEED = 5;
 final int BALA_SPEED = 10;
 
 void setup() {
@@ -21,11 +23,14 @@ void setup() {
     asteroide = loadImage("asteroide.png");
     asteroide.resize(100, 100);
     naveEnemigo = loadImage("naveEnemigo.png");
+    naveEnemigo.resize(100, 100);
     
     balas = new ArrayList<>();
     nave = new Nave(this, naveIMG, 50, height / 2, NAVE_SPEED);
     asteroides = new ArrayList<>();
     asteroides.add(new Asteroide(this, asteroide, width, random(height), ASTEROIDE_SPEED));
+    enemigo = new ArrayList<>();
+    enemigo.add(new Enemigo(this, naveEnemigo, width, random(height), ENEMIGO_SPEED));
 }
 
 void draw() {
@@ -38,6 +43,16 @@ void draw() {
         
         if (asteroide.x + asteroide.img.width < 0) {
             asteroides.remove(i);
+        }
+    }
+    
+    for (int i = enemigo.size() - 1; i >= 0; i--) {
+        Enemigo naveEnemigo = enemigo.get(i);
+        enemigo.display();
+        enemigo.move();
+        
+        if (naveEnemigo.x + enemigo.img.width < 0) {
+            enemigo.remove(i);
         }
     }
     
