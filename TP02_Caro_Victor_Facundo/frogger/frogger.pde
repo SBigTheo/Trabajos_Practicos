@@ -9,6 +9,7 @@ PImage auto3;
 
 Escenario escenario;
 Sapo sapo;
+SpawnerVehiculos spawnerVehiculos;
 
 void setup() {
   size(700, 800);
@@ -30,11 +31,14 @@ void setup() {
   
   escenario = new Escenario();
   sapo = new Sapo(300, 700);
+  spawnerVehiculos = new SpawnerVehiculos(auto1, auto2, auto3);
+  spawnerVehiculos.generarVehiculos();
 }
 
 void draw() {
   background(200);
   escenario.mostrar();
+  spawnerVehiculos.actualizarVehiculos();
   sapo.mostrar();
 }
 
